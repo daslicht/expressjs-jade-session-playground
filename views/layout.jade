@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    include navigation
+    #user
+        if currentUser
+            p Welcome #{currentUser.username}
+            a(href='/logout') logout
+        else
+            | Login with any credentials
+            include login
+
+
+
+    block content
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/client.js')
