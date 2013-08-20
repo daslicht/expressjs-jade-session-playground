@@ -1,0 +1,30 @@
+doctype 5
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/css/style.css')
+        link(rel='stylesheet', href='/lib/redactor-js/redactor/redactor.css')
+        link(rel='stylesheet', href='lib/dropzone/downloads/css/dropzone.css')
+
+    body
+        include 'navigation'
+
+        .flashMessage
+            - if(message)
+                foreach message as m
+                    li #{m.path} #{m.type}
+
+        - if(user)
+            p Welcome #{user.username}
+            a(href='/account') account
+            a(href='/logout') logout
+
+
+
+    block content
+    script(src='lib/jquery-1.9.0.min.js')
+    script(src='lib/dropzone/downloads/dropzone.min.js')
+    script(src='/lib/redactor-js/redactor/redactor_new.js')
+    script(src='/js/moment.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/client.js')

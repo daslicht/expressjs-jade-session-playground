@@ -1,0 +1,5 @@
+include 'layout.blade'
+h2 Upload
+form.dropzone#my-awesome-dropzone(action="/upload", enctype="multipart/form-data")
+    input(type="hidden", name="myval", value='cool')
+

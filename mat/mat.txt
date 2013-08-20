@@ -1,0 +1,7 @@
+https://github.com/leepowellcouk/mongoose-validator
+https://github.com/blakehaswell/mongoose-unique-validator
+https://npmjs.org/package/mongoose-stamp
+https://github.com/jupe/gridfstore
+https://github.com/scttnlsn/mongoose-acl
+
+http://stringjs.com/#methods/trim

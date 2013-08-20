@@ -1,0 +1,10 @@
+include 'layout.blade'
+h2 List
+- if(files)
+    ul
+        foreach files as f
+            li
+                img(src='/uploads/'+f)
+
+
+

@@ -1,0 +1,10 @@
+nav
+    a(href='/') HOME
+    - if(user)
+        a(href='/account')  ACCOUNT
+        a(href='/logout')  logout
+    - else
+        a(href='/signup')  signup
+        a(href='/login')  login
+
+

@@ -1,0 +1,18 @@
+include 'layout.blade'
+
+block content
+    h1= title
+    form#create-post(action='/create-post', method='post', name='create-post')
+        div
+            label Date: #{date}
+            input(type='date', name='date' value='#{date}')
+        div
+            label Headline:
+            input(type='text', name='headline', Placeholder='Enter Headline')
+        div
+            label Message:
+            textarea#redactor-area(rows='4', cols='50', name='content', form='create-post', placeholder='New Blog Post')
+
+        div
+            input(type='submit', value='Create')
+    script(src='/js/redactor-init.js')

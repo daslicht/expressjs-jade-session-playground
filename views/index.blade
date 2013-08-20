@@ -1,0 +1,20 @@
+include 'layout.blade'
+
+block content
+    h1= title
+    p Welcome to #{title}
+    - if(user)
+        a(href="/create-post") create post
+        a(href="/upload") upload
+    //- - if(blog)
+
+    h2 Blog Posts
+    foreach blog as b
+        li
+            p
+                |#{moment(b.createdAt).format("DD.MM.YYYY")}
+                |by #{b.createdBy}
+            p #{b.headline}
+            p
+                != b.content
+            hr
